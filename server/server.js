@@ -71,3 +71,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Job Portal API Server running on http://localhost:${PORT}`);
   console.log(`📡 Health check: http://localhost:${PORT}/api/health`);
 });
+
+export default app;

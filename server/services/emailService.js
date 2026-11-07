@@ -2,6 +2,8 @@ import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 dotenv.config();
 
+const APP_URL = process.env.APP_URL || process.env.CLIENT_URL || 'http://localhost:3000';
+
 // In-Memory store of sent emails so users can inspect received emails in-app
 export const sentEmails = [
   {
@@ -56,7 +58,7 @@ export const sentEmails = [
             </div>
 
             <div style="text-align: center;">
-              <a href="http://localhost:3000" class="btn">Explore Verified Jobs</a>
+              <a href="${APP_URL}" class="btn">Explore Verified Jobs</a>
             </div>
           </div>
           <div class="footer">
@@ -104,7 +106,7 @@ export const sentEmails = [
             <h1>Welcome, Marcus! 🚀</h1>
             <p>Your recruiter hub for <strong>Stripe India</strong> is ready. Start posting openings with AI-generated job specifications and screen pre-ranked applicants instantly.</p>
             <div style="text-align: center;">
-              <a href="http://localhost:3000" class="btn">Open Recruiter Hub</a>
+              <a href="${APP_URL}" class="btn">Open Recruiter Hub</a>
             </div>
           </div>
           <div class="footer">
@@ -299,7 +301,7 @@ export const emailService = {
             </div>
 
             <div style="text-align: center;">
-              <a href="http://localhost:3000" class="btn">Launch Platform</a>
+              <a href="${APP_URL}" class="btn">Launch Platform</a>
             </div>
           </div>
           <div class="footer">
